@@ -2,6 +2,7 @@
 
 Petitioneering demonstrates a simple Node.js web application based on the Express framework, retrieving and displaying results from an Elasticsearch index.
 
+"Which petitions are most important to people in my constituency?".
 ## Run the app locally
 
 1. [Install Node.js][]

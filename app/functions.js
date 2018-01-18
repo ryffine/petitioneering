@@ -30,34 +30,14 @@ function results (constitLookup,callback) {
           ]
         }
       },
-      sort: {
-        'signatures_by_constituency.importance' : {
-          order: 'desc',
-          nested_path: 'signatures_by_constituency',
-          nested_filter: {
-            query: {
-              bool: {
-                must: [
-                  { 'match': { 'signatures_by_constituency.name': constitLookup }}
-                ]
-              }
+        sort: {
+            'signatures_by_constituency.importance': {
+                order: 'desc',
+            },
+            'signatures_by_constituency.signature_count': {
+                order: 'desc',
             }
-          }
-        },
-        'signatures_by_constituency.signature_count' : {
-          order: 'desc',
-          nested_path: 'signatures_by_constituency',
-          nested_filter: {
-            query: {
-              bool: {
-                must: [
-                  { 'match': { 'signatures_by_constituency.name': constitLookup }}
-                ]
-              }
-            }
-          }
         }
-      }
     }
   },function (error, response, status) {
       if (error){
