@@ -3,18 +3,18 @@ extends layout
 block content
   div#header
     div#title
-      img(class='newappIcon' src='images/logo-graphic-white.png')
-      h1 Petitioneering
+      img(class='newappIcon' src='images/logo_white_transparent.png')
   div#main
     div#content
       div#search-div
-        p Want to know what really matters to voters in your constituency? Type your postcode into the search box to find out...
-        h2 Search by Postcode
+        p Want to know what really matters? Type your postcode into the search box to find out...
+        h2 Search by Transaction
+        h5 sample: NN6 7EL
         div#intro-div
         form
         input(id='postcode',name='postcode',type='text', placeholder="Enter postcode")
         span(id='pcbutton', value="postcode") Submit
-        h2 Search by Constituency
+        h2 Search by Region
         form
           select(id='constitlist')
             option(value='')
